@@ -18,7 +18,7 @@ body
 	font-family: 'GothamPro'
 	font-weight: 500
 	overflow-x: hidden
-	color: $text
+	color: #fff
 	input, textarea
 		border: #666 1px solid
 		outline: none
@@ -40,6 +40,107 @@ body
 b, strong
 	font-weight: bold
 
+header
+	position: relative
+	.container
+		position: absolute
+		left: 0
+		right: 0
+		top: 0
+		width: 100%
+		height: 100%
+		z-index: 2
+.slider
+	.slider-item
+		height: 750px
+		background-size: cover
+		background-position: top center
+		position: relative
+		&:before
+			content: ''
+			display: block
+			position: absolute
+			left: 0
+			top: 0
+			width: 100%
+			height: 100%
+			background-color: rgba(0, 0, 0, 0.2)
+
+.header-content
+	display: flex
+	height: 100%
+	text-align: center
+	flex-wrap: wrap
+	flex-direction: column
+
+.logo
+	width: 100%
+	font-size: 55px
+	margin-top: 65px
+	margin-bottom: 75px	
+.search-content
+	width: 100%
+
+.search-title
+	font-size: 70px
+	line-height: 70px
+	font-weight: bold
+	letter-spacing: 2px
+	color: #fff
+
+.search-text
+	font-size: 24px
+	font-weight: 300
+	letter-spacing: 1px
+	margin-bottom: 45px
+
+.search-form
+	width: 100%
+	max-width: 832px
+	padding: 28px
+	background-color: #120c00
+	border-radius: 56px
+	margin: 0 auto
+	display: flex
+	justify-content: space-between
+	.email
+		border-radius: 28px
+		min-width: 284px
+		padding-left: 24px
+	select
+		min-width: 252px
+		border-radius: 28px
+		padding-left: 24px
+		&:focus
+			outline: none	
+
+.slider
+	position: relative
+	.owl-nav
+		position: absolute
+		top: 45%
+		width: 100%
+		button
+			width: 52px
+			height: 52px
+			border-radius: 50%
+			//background-color: rgba(255,255,255, 0.3) !important
+			background: rgba(255,255,255, 0.3)  url(../img/arrow.svg) !important
+			background-repeat: no-repeat
+			// background-size: 140px
+			span
+				display: none
+		.owl-prev
+			position: absolute
+			left: 10%
+			top: 0%
+			z-index: 2
+
+		.owl-next
+			position: absolute
+			rignt: 10%
+			top: 0%
+			z-index: 2	
 
 
 @import "media" // Always at the end
