@@ -38,6 +38,7 @@ gulp.task('js', function() {
 	return gulp.src([
 		'app/libs/jquery/dist/jquery.min.js',
 		'app/libs/owlCarousel/owl.carousel.min.js',
+		'app/libs/styler/jquery.formstyler.js',
 		'app/js/common.js', // Always at the end
 		])
 	.pipe(concat('scripts.min.js'))
