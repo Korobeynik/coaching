@@ -17,10 +17,12 @@
 		flex-wrap: wrap
 		padding-left: 0
 		padding-right: 0
+		padding-top: 10px
+		background-color: transparent
 	.info
 		margin-top: 0
-		padding-top: 280px
-		background-color: #120c00
+		padding-top: 250px
+		background-color: #000
 		background-image: none
 		z-index: 0
 	.info-image
@@ -30,6 +32,17 @@
 		flex-wrap: wrap
 	.info-content
 		padding-top: 20px
+		background-image: url(../img/info-image.png)
+		background-size: 51%
+		background-repeat: no-repeat
+		background-position: -35% 50%
+		.base-title
+			margin-bottom: 0
+		.info-text
+			padding-left: 35%
+			text-align: left
+		.info-small-title
+			padding-left: 28%		
 	.logo
 		font-size: 30px
 		margin-bottom: 0
@@ -38,7 +51,8 @@
 	.search-text
 		font-size: 18px
 		line-height: 1.17
-	.search-form 
+	.search-form
+		background-color: #000 
 		.email,select,.base-btn
 			width: 100%
 			height: 56px
@@ -100,6 +114,7 @@
 	.info-small-title
 		font-size: 18px
 		text-align: center
+		margin-bottom: 10px
 	.base-btn,
 	.base-btn.btn-large
 		max-width: 100%	
@@ -129,6 +144,7 @@
 					background-color: $orange
 	.service-icon
 		top: 0
+		margin-bottom: 15px
 	.service-item
 		padding-top: 20px
 	.service-info .base-title
@@ -164,14 +180,69 @@
 	.footer-section
 		margin-top: 50px
 	.search-form
-  .base-btn, .email, select
-    width: 100%
-    height: 56px
-    max-width: 100%
-    margin-bottom: 15px
-    display: flex
-    align-items: center
-    justify-content: center																																						
+	.base-btn, .email, select
+		width: 100%
+		height: 56px
+		max-width: 100%
+		margin-bottom: 15px
+		display: flex
+		align-items: center
+		justify-content: center
+
+	::-webkit-input-placeholder
+		font-size: 12px
+		font-weight: 500
+		letter-spacing: 0.4px
+		text-transform: uppercase
+		position: relative
+		bottom: -5px
+		
+
+	::-moz-placeholder
+		color: #9b9b9b
+		font-size: 12px
+		font-weight: 500
+		letter-spacing: 0.4px
+		text-transform: uppercase
+		position: relative
+		bottom: -5px
+
+	::-ms-input-placeholder	
+		color: #9b9b9b
+		font-size: 12px
+		font-weight: 500
+		letter-spacing: 0.4px
+		text-transform: uppercase
+		position: relative
+		bottom: -5px
+
+	::-webkit-textarea-placeholder
+		color: #9b9b9b
+		font-size: 12px
+		font-weight: 500
+		letter-spacing: 0.4px
+		text-transform: uppercase
+		position: relative
+		bottom: -5px
+	.slider-settings
+		display: none !important
+	.coaches-item
+		padding: 20px
+	.coaches-item .base-btn
+		left: 0
+	.slider	
+		.owl-dots
+			background: linear-gradient(to top, rgba(0,0,0,1) 19%,rgba(0,0,0,0.3) 64%,rgba(255,255,255,0) 100%)
+	.slider .owl-dots button.owl-dot.active:before
+		content: ''
+		display: block
+		position: absolute
+		width: 100%
+		height: 100%
+		left: 0
+		top: 2px
+		z-index: -1
+		background: radial-gradient(circle closest-side at 50% 50%,#f5a623,rgba(0,0,0,0))			  																																						
 
 
 // ≥576px

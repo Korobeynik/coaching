@@ -127,6 +127,7 @@ header
 	font-weight: 500
 	letter-spacing: 0.4px
 	text-transform: uppercase
+	position: relative
 
 ::-moz-placeholder
 	color: #9b9b9b
@@ -154,7 +155,7 @@ header
 
 select
 	-webkit-appearance: none
-	background-image: url('../img/down-arrow.svg')
+	background: #fff url('../img/down-arrow.svg')
 	background-size: 12px
 	background-position: 95% center
 	background-repeat: no-repeat
@@ -194,6 +195,18 @@ select
 			width: 189px
 			height: 100%
 			margin: 0 5px
+			position: relative
+			&.active
+				&:before
+					content: ''
+					display: block
+					position: absolute
+					width: 100%
+					height: 150%
+					left: 0
+					top: -20px
+					z-index: -1
+					background: radial-gradient(circle closest-side at 93px 60px,#f5a623,rgba(0,0,0,0));
 			&:focus
 				outline: none
 			&:nth-child(1)
@@ -270,6 +283,23 @@ select
 		bottom: 0
 		background: linear-gradient(to bottom,rgba(24,19,15,0) 0,rgba(24,19,15,.74) 70%,rgba(24,19,15,.98) 119%,#18130f 95%,#18130f 100%)
 		z-index: 0
+
+
+.slider-settings
+	width: 100%
+	position: absolute
+	height: 75px
+	top: 80px
+	display: flex
+	align-items: center
+	justify-content: center
+
+.slider-setting
+	width: 180px
+	height: 100%
+	margin: 0 10px
+	&:hover
+		cursor: pointer  
 
 .info-image
 	img
