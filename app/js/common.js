@@ -30,18 +30,41 @@ $(function() {
 
     $('.slider-settings-1').click(function() {
         $('.slider .owl-dots button.owl-dot:nth-child(1)').trigger('click');
+        $('#select option').removeAttr( "selected");
+        $('#game-ll').attr('selected','selected');
     });
     $('.slider-settings-2').click(function() {
         $('.slider .owl-dots button.owl-dot:nth-child(2)').trigger('click');
+        $('#select option').removeAttr( "selected");
+        $('#game-dota').attr('selected','selected');
     });
     $('.slider-settings-3').click(function() {
         $('.slider .owl-dots button.owl-dot:nth-child(3)').trigger('click');
+        $('#select option').removeAttr( "selected");
+        $('#game-ww').attr('selected','selected');
     });
     $('.slider-settings-4').click(function() {
         $('.slider .owl-dots button.owl-dot:nth-child(4)').trigger('click');
+        $('#select option').removeAttr( "selected");
+        $('#game-cs').attr('selected','selected');
     });
 
     //$('select').styler();
+    // function changeSlider() {
+    //     if($('.owl-item.active').find('.game-ll')) {
+    //         $('#select option').removeAttr( "selected");
+    //         $('#game-ll').attr('selected','selected');
+    //    } else if($('.owl-item.active').find('.game-dota')) {
+    //         $('#select option').removeAttr( "selected");
+    //         $('#game-dota').attr('selected','selected');
+    //    } else if($('.owl-item.active').find('.game-ww')) {
+    //         $('#select option').removeAttr( "selected");
+    //         $('#game-ww').attr('selected','selected');
+    //    } else if($('.owl-item.active').find('.game-cs')) {
+    //         $('#select option').removeAttr( "selected");
+    //         $('#game-cs').attr('selected','selected');
+    //    }
+    // }
 
     var owl = $('.slider');
     owl.owlCarousel({
@@ -53,6 +76,11 @@ $(function() {
         nav: true,
         autoplayTimeout: 20000,
         autoplayHoverPause: false
+    }).on('translate.owl.carousel', function() {
+       console.log('1');
+       //changeSlider();
+    }).on('translated.owl.carousel', function() {
+      console.log('2')
     });
 
     var owlReview = $('.reviews-slider');
